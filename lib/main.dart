@@ -1,12 +1,38 @@
 import 'package:flutter/material.dart';
+// import 'fade_route.dart';
 
 void main() => runApp(MyApp());
+
+class MyCustomRoute<T> extends MaterialPageRoute<T> {
+  MyCustomRoute({ WidgetBuilder builder, RouteSettings settings })
+      : super(builder: builder, settings: settings);
+
+  @override
+  Widget buildTransitions(BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation,
+      Widget child) {
+    if (settings.isInitialRoute)
+      return child;
+    // Fades between routes. (If you don't want any animation,
+    // just return child.)
+    return new FadeTransition(opacity: animation, child: child);
+  }
+}
+
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext ctxt) {
     return new MaterialApp(
       home: new HomeScreen(),
+      theme: ThemeData(
+        brightness:     Brightness.light,
+        primaryColor:   Color(0xFFFF9000),
+        accentColor:    Color(0xFFFF9000),
+        fontFamily: 'Roboto',
+
+      )
     );
   }
 }
@@ -28,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                     Navigator.push(
                         ctxt,
-                        new MaterialPageRoute(builder: (ctxt) => new SoiledScreen()),
+                        new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
                     );
                 },
               )
@@ -56,7 +82,7 @@ class SoiledScreen extends StatelessWidget {
                     onPressed: () {
                         Navigator.push(
                             ctxt,
-                            new MaterialPageRoute(builder: (ctxt) => new MaterialScreen()),
+                            new MyCustomRoute(builder: (ctxt) => new MaterialScreen()),
                         );
                     },
                   ),
@@ -66,7 +92,7 @@ class SoiledScreen extends StatelessWidget {
                     onPressed: () {
                         Navigator.push(
                         ctxt,
-                        new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                         );
                     },
                   )
@@ -98,7 +124,7 @@ class MaterialScreen extends StatelessWidget {
                         onPressed: () {
                             Navigator.push(
                                 ctxt,
-                                new MaterialPageRoute(builder: (ctxt) => new PlasticScreen()),
+                                new MyCustomRoute(builder: (ctxt) => new PlasticScreen()),
                             );
                         },
                       ),
@@ -114,7 +140,7 @@ class MaterialScreen extends StatelessWidget {
                         onPressed: () {
                             Navigator.push(
                                 ctxt,
-                                new MaterialPageRoute(builder: (ctxt) => new GlassScreen()),
+                                new MyCustomRoute(builder: (ctxt) => new GlassScreen()),
                             );
                         },
                       ),
@@ -130,7 +156,7 @@ class MaterialScreen extends StatelessWidget {
                         onPressed: () {
                             Navigator.push(
                                 ctxt,
-                                new MaterialPageRoute(builder: (ctxt) => new CardboardScreen()),
+                                new MyCustomRoute(builder: (ctxt) => new CardboardScreen()),
                             );
                         },
                       ),
@@ -146,7 +172,7 @@ class MaterialScreen extends StatelessWidget {
                         onPressed: () {
                             Navigator.push(
                                 ctxt,
-                                new MaterialPageRoute(builder: (ctxt) => new PaperScreen()),
+                                new MyCustomRoute(builder: (ctxt) => new PaperScreen()),
                             );
                         },
                       ),
@@ -162,7 +188,7 @@ class MaterialScreen extends StatelessWidget {
                           onPressed: () {
                               Navigator.push(
                                   ctxt,
-                                  new MaterialPageRoute(builder: (ctxt) => new MetalScreen()),
+                                  new MyCustomRoute(builder: (ctxt) => new MetalScreen()),
                               );
                           },
                         ),
@@ -178,7 +204,7 @@ class MaterialScreen extends StatelessWidget {
                         onPressed: () {
                             Navigator.push(
                                 ctxt,
-                                new MaterialPageRoute(builder: (ctxt) => new MixedScreen()),
+                                new MyCustomRoute(builder: (ctxt) => new MixedScreen()),
                             );
                         },
                       ),
@@ -194,7 +220,7 @@ class MaterialScreen extends StatelessWidget {
                         onPressed: () {
                             Navigator.push(
                                 ctxt,
-                                new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                                new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                             );
                         },
                       ),
@@ -230,7 +256,7 @@ class PlasticScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new SoftPlasticScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new SoftPlasticScreen()),
                       );
                   },
                 ),
@@ -246,7 +272,7 @@ class PlasticScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new HardPlasticScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new HardPlasticScreen()),
                       );
                   },
                 ),
@@ -280,7 +306,7 @@ class SoftPlasticScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -296,7 +322,7 @@ class SoftPlasticScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new ClingScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new ClingScreen()),
                       );
                   },
                 ),
@@ -330,7 +356,7 @@ class ClingScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -346,7 +372,7 @@ class ClingScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -380,7 +406,7 @@ class HardPlasticScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -396,7 +422,7 @@ class HardPlasticScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new HardPlasticPastScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new HardPlasticPastScreen()),
                       );
                   },
                 ),
@@ -411,7 +437,7 @@ class HardPlasticScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -446,7 +472,7 @@ class HardPlasticPastScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -462,7 +488,7 @@ class HardPlasticPastScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -499,7 +525,7 @@ class GlassScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -515,7 +541,7 @@ class GlassScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new FlatGlassScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new FlatGlassScreen()),
                       );
                   },
                 ),
@@ -549,7 +575,7 @@ class FlatGlassScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -565,7 +591,7 @@ class FlatGlassScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new LightBulbScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new LightBulbScreen()),
                       );
                   },
                 ),
@@ -599,7 +625,7 @@ class LightBulbScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableLightBulbScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableLightBulbScreen()),
                       );
                   },
                 ),
@@ -615,7 +641,7 @@ class LightBulbScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new PyrexScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new PyrexScreen()),
                       );
                   },
                 ),
@@ -663,7 +689,7 @@ class PyrexScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -679,7 +705,7 @@ class PyrexScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -715,7 +741,7 @@ class CardboardScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new FlatCardboardScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new FlatCardboardScreen()),
                       );
                   },
                 ),
@@ -731,7 +757,7 @@ class CardboardScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new FoldedCardboardScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new FoldedCardboardScreen()),
                       );
                   },
                 ),
@@ -765,7 +791,7 @@ class FlatCardboardScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -781,7 +807,7 @@ class FlatCardboardScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
                       );
                   },
                 ),
@@ -816,7 +842,7 @@ class FoldedCardboardScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -832,7 +858,7 @@ class FoldedCardboardScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
                       );
                   },
                 ),
@@ -880,7 +906,7 @@ class PaperScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -896,7 +922,7 @@ class PaperScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new PaperStickerScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new PaperStickerScreen()),
                       );
                   },
                 ),
@@ -930,7 +956,7 @@ class PaperStickerScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new EnvelopeTypeScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new EnvelopeTypeScreen()),
                       );
                   },
                 ),
@@ -946,7 +972,7 @@ class PaperStickerScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new FoilWrappingCoatingPaperScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new FoilWrappingCoatingPaperScreen()),
                       );
                   },
                 ),
@@ -980,7 +1006,7 @@ class EnvelopeTypeScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new EnvelopeScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new EnvelopeScreen()),
                       );
                   },
                 ),
@@ -996,7 +1022,7 @@ class EnvelopeTypeScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -1030,7 +1056,7 @@ class EnvelopeScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -1046,7 +1072,7 @@ class EnvelopeScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -1080,7 +1106,7 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -1096,7 +1122,7 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -1132,7 +1158,7 @@ class MetalScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new ElectronicBatteryScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new ElectronicBatteryScreen()),
                       );
                   },
                 ),
@@ -1148,7 +1174,7 @@ class MetalScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new NonElectronicScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new NonElectronicScreen()),
                       );
                   },
                 ),
@@ -1202,7 +1228,7 @@ class NonElectronicScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -1218,7 +1244,7 @@ class NonElectronicScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new MoreMetalScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new MoreMetalScreen()),
                       );
                   },
                 ),
@@ -1252,7 +1278,7 @@ class MoreMetalScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -1268,7 +1294,7 @@ class MoreMetalScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new PotsPansScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new PotsPansScreen()),
                       );
                   },
                 ),
@@ -1302,7 +1328,7 @@ class PotsPansScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
                 ),
@@ -1318,7 +1344,7 @@ class PotsPansScreen extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                           ctxt,
-                          new MaterialPageRoute(builder: (ctxt) => new RecyclableScreen()),
+                          new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
                 ),
@@ -1376,7 +1402,7 @@ class UnrecyclableScreen extends StatelessWidget {
                 onPressed: () {
                     Navigator.push(
                         ctxt,
-                        new MaterialPageRoute(builder: (ctxt) => new SoiledScreen()),
+                        new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
                     );
                 },
               ),
@@ -1408,7 +1434,7 @@ class RecyclableScreen extends StatelessWidget {
                 onPressed: () {
                     Navigator.push(
                         ctxt,
-                        new MaterialPageRoute(builder: (ctxt) => new SoiledScreen()),
+                        new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
                     );
                 },
               ),
