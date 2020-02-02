@@ -47,7 +47,21 @@ class HomeScreen extends StatelessWidget {
       body: Center(
           child: Column(
             children: <Widget>[
-              Text("Start?"),
+
+              Center(
+                child: 
+                Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Start?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                )
+              ),
+              
               FlatButton(
                 onPressed: () {
                     Navigator.push(
@@ -96,8 +110,22 @@ class SoiledScreen extends StatelessWidget {
       ),
       body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                  Text("Is the item soiled?"),
+                  Center(
+                    child: 
+                    Container(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: 
+                        Text("Is the item soiled\n(with food waste, dirt, dust, or any other residue)?",style: 
+                          new TextStyle(
+                            fontSize: 30.0,
+                            color: Colors.green,
+                          )
+                        )
+                    )
+                  ),
                   FlatButton(
                   onPressed: () {
                       Navigator.push(
@@ -177,23 +205,25 @@ class MaterialScreen extends StatelessWidget {
       ),
       body: Center(
           child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                  Text("What is the item made of?"),
+                  Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("What is the item made of??",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
+                  //Text("What is the item made of?"),
                   // Plastic
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      //Text("Plastic"),
-                      /*
-                      IconButton(
-                        icon: Icon(Icons.crop_square),
-                        tooltip: 'Plastic',
-                        onPressed: () {
-                            Navigator.push(
-                                ctxt,
-                                new MyCustomRoute(builder: (ctxt) => new PlasticScreen()),
-                            );
-                        },
-                      )*/
                       
                     FlatButton(
                       onPressed: () {
@@ -207,7 +237,7 @@ class MaterialScreen extends StatelessWidget {
                         side: BorderSide(color: Colors.grey)
                       ),
                       color: Colors.white,
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(10.0),
                     
                       child: Text("Plastic", style: 
                         new TextStyle(
@@ -234,7 +264,7 @@ class MaterialScreen extends StatelessWidget {
                         side: BorderSide(color: Colors.grey)
                       ),
                       color: Colors.white,
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(10.0),
                     
                       child: Text("Glass", style: 
                         new TextStyle(
@@ -272,7 +302,7 @@ class MaterialScreen extends StatelessWidget {
                         side: BorderSide(color: Colors.grey)
                       ),
                       color: Colors.white,
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(10.0),
                     
                       child: Text("Cardboard", style: 
                         new TextStyle(
@@ -310,7 +340,7 @@ class MaterialScreen extends StatelessWidget {
                         side: BorderSide(color: Colors.grey)
                       ),
                       color: Colors.white,
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(10.0),
                     
                       child: Text("Paper", style: 
                         new TextStyle(
@@ -348,7 +378,7 @@ class MaterialScreen extends StatelessWidget {
                         side: BorderSide(color: Colors.grey)
                       ),
                       color: Colors.white,
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(10.0),
                     
                       child: Text("Metal", style: 
                         new TextStyle(
@@ -386,7 +416,7 @@ class MaterialScreen extends StatelessWidget {
                           side: BorderSide(color: Colors.grey)
                         ),
                         color: Colors.white,
-                        padding: EdgeInsets.all(5.0),
+                        padding: EdgeInsets.all(10.0),
                       
                         child: Text("Mixed", style: 
                           new TextStyle(
@@ -424,7 +454,7 @@ class MaterialScreen extends StatelessWidget {
                           side: BorderSide(color: Colors.grey)
                         ),
                         color: Colors.white,
-                        padding: EdgeInsets.all(5.0),
+                        padding: EdgeInsets.all(10.0),
                       
                         child: Text("Rubber and\nother materials", style: 
                           new TextStyle(
@@ -464,8 +494,21 @@ class PlasticScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item made of soft or hard plastic?"),
+            //Text("Is the item made of soft or hard plastic?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item made of soft or hard plastic?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -491,17 +534,7 @@ class PlasticScreen extends StatelessWidget {
                     ),
                   ),
                 )
-                /*
-                IconButton(
-                  icon: Icon(Icons.crop_square),
-                  tooltip: 'Soft Plastic',
-                  onPressed: () {
-                      Navigator.push(
-                          ctxt,
-                          new MyCustomRoute(builder: (ctxt) => new SoftPlasticScreen()),
-                      );
-                  },
-                )*/,
+                ,
               ]
             ),
             // Glass
@@ -528,18 +561,7 @@ class PlasticScreen extends StatelessWidget {
                       color: Colors.green,
                     ),
                   ),
-                )
-                /*
-                IconButton(
-                  icon: Icon(Icons.crop_square),
-                  tooltip: 'Hard Plastic',
-                  onPressed: () {
-                      Navigator.push(
-                          ctxt,
-                          new MyCustomRoute(builder: (ctxt) => new HardPlasticScreen()),
-                      );
-                  },
-                )*/,
+                ),
               ]
             ),
           ],
@@ -558,8 +580,23 @@ class SoftPlasticScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item made of waxy or greasy soft plastic?"),
+            Center(
+              child: 
+              Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item made of greasy/waxy plastic?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
+            ),
+            
             // Waxy/Greasy
             Column(
               children: <Widget>[
@@ -652,8 +689,20 @@ class ClingScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item made of cling film/plastic?"),
+            //Text("Is the item made of cling film/plastic?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item made of cling film/plastic?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Waxy/Greasy
             Column(
               children: <Widget>[
@@ -748,8 +797,20 @@ class HardPlasticScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the number inside the triangle #6?"),
+            //Text("Is the number inside the triangle #6?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the number inside the triangle #6?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Waxy/Greasy
             Column(
               children: <Widget>[
@@ -774,19 +835,7 @@ class HardPlasticScreen extends StatelessWidget {
                       color: Colors.green,
                     ),
                   ),
-                )
-                /*
-                IconButton(
-                  icon: Icon(Icons.check),
-                  tooltip: 'is#6',
-                  onPressed: () {
-                      Navigator.push(
-                          ctxt,
-                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
-                      );
-                  },
-                ) */
-                ,
+                ),
               ]
             ),
             // Not Waxy/greasy
@@ -883,8 +932,20 @@ class HardPlasticPastScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Has the item contained paint, toothpaste, oil, or CDs?"),
+            //Text("Has the item contained paint, toothpaste, oil, or CDs?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Has the item contained paint, toothpaste, oil, or CDs?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Waxy/Greasy
             Column(
               children: <Widget>[
@@ -982,8 +1043,20 @@ class GlassScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item a glass plate or drinking glass?"),
+            //Text("Is the item a glass plate or drinking glass?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item a glass plate or drinking glass?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -1078,8 +1151,20 @@ class FlatGlassScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item a window or a mirror?"),
+            //Text("Is the item a window or a mirror?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item a window or a mirror?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -1174,8 +1259,20 @@ class LightBulbScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item a lightbulb?"),
+            //Text("Is the item a lightbulb?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item a lightbulb?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -1269,10 +1366,24 @@ class UnrecyclableLightBulbScreen extends StatelessWidget {
         title: new Text("RecyclABLE"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          /*
           Text("""Lightbulbs can't be recycled with other commonly recyclable items.
                 Some of your local furniture stores may offer a lightbulb recycling service. 
                 Please consider options in your vicinity!"""),
+                */
+          Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("""Lightbulbs can't be recycled with other commonly recyclable items.\nSome of your local furniture stores may offer a lightbulb recycling service.\nPlease consider options in your vicinity!""",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
           Column(
             children: <Widget>[
               //Text("\nStart over?"),
@@ -1315,8 +1426,20 @@ class PyrexScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item made of pyrex?"),
+            //Text("Is the item made of pyrex?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item made of pyrex?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -1412,12 +1535,24 @@ class CardboardScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item flat or folded?"),
+            //Text("Is the item flat or folded?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item flat or folded?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
-                Text("Flat Cardboard"),
+                //Text("Flat Cardboard"),
                 FlatButton(
                   onPressed: () {
                     Navigator.push(
@@ -1508,8 +1643,20 @@ class FlatCardboardScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Are there bits of tape, stickers, or glue residue on the cardboard?"),
+            //Text("Are there bits of tape, stickers, or glue residue on the cardboard?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Are there bits of tape, stickers, or glue residue on the cardboard?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -1604,9 +1751,21 @@ class FoldedCardboardScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Un-fold the cardboard item, and then proceed: "),
-            Text("Are there bits of tape, stickers, or glue residue on the cardboard?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Un-fold the cardboard item, and then proceed:\n\nAre there bits of tape, stickers, or glue residue on the cardboard?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
+            //Text("Un-fold the cardboard item, and then proceed: "),
+            //Text("Are there bits of tape, stickers, or glue residue on the cardboard?"),
             // Plastic
             Column(
               children: <Widget>[
@@ -1701,7 +1860,46 @@ class CardboardWithResidueScreen extends StatelessWidget {
       appBar: new AppBar(
         title: new Text("RecyclABLE"),
       ),
-      body: new Text("Remove the tape, stickers, or glue residue\n(or cut out relevant pieces of cardboard)\nand then the cardboard can be recycled!"),
+      body: 
+      //new Text("Remove the tape, stickers, or glue residue\n(or cut out relevant pieces of cardboard)\nand then the cardboard can be recycled!"),
+      Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Remove the tape, stickers, or glue residue\n(or cut out relevant pieces of cardboard)\nand then the cardboard can be recycled!",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
+      FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      ctxt,
+                      new MyCustomRoute(builder: (ctxt) => new HomeScreen()),
+                  );
+                },
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.grey)
+              ),
+              color: Colors.white,
+              padding: EdgeInsets.all(50.0),
+              
+              child: Text("Start Over?", style: 
+                  new TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.green,
+                  ),
+                ),
+              )
+      ],)
+      
+      
     );
   }
 }
@@ -1717,8 +1915,20 @@ class PaperScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item a newspaper, magazine, or made of standard paper?"),
+            //Text("Is the item a newspaper, magazine, or made of standard paper?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item a newspaper, magazine, or made of standard paper?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -1813,8 +2023,20 @@ class PaperStickerScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is there a sticker or adhesive residue on the item?"),
+            //Text("Is there a sticker or adhesive residue on the item?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Are there stickers or adhesive residue on the item?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -1909,8 +2131,20 @@ class EnvelopeTypeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item a type of envelope?"),
+            //Text("Is the item a type of envelope?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item a type of envelope?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -2005,8 +2239,20 @@ class EnvelopeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the envelope padded?"),
+            //Text("Is the envelope padded?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the envelope padded?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -2101,8 +2347,20 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item made of plastic-coated/plastic-lined paper or made of wrapping paper?"),
+            //Text("Is the item made of plastic-coated/plastic-lined paper or made of wrapping paper?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item made of plastic-coated/plastic-lined paper or made of wrapping paper?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -2199,8 +2457,20 @@ class MetalScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is an electronic item or a battery?"),
+            //Text("Is an electronic item or a battery?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is an electronic item or a battery?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -2282,7 +2552,10 @@ class ElectronicBatteryScreen extends StatelessWidget {
         title: new Text("RecyclABLE"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget> [
+        /*
         Column(
           children: <Widget>[
             Text("Electronics and Batteries"),
@@ -2291,7 +2564,17 @@ class ElectronicBatteryScreen extends StatelessWidget {
             Please consult your municipal guide.
             """)
           ]
-        ),
+        ),*/
+        Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("""Unfortunately, recycling electronics and batteries can be complicated...\nPlease consult your municipal guide.""",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
         Column(
           children: <Widget>[
           Text(" "),
@@ -2338,8 +2621,20 @@ class NonElectronicScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item made of scrap metal, nails, screws, or pipes?"),
+            //Text("Is the item made of scrap metal, nails, screws, or pipes?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item made of scrap metal, nails, screws, or pipes?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -2434,8 +2729,20 @@ class MoreMetalScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Has the item ever contained paints, solvents, aerosols, toxins, or hazardous chemicals?"),
+            //Text("Has the item ever contained paints, solvents, aerosols, toxins, or hazardous chemicals?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Has the item ever contained paints, solvents, aerosols, toxins, or hazardous chemicals?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -2529,8 +2836,20 @@ class PotsPansScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Is the item a pot, pan, baking tray, or has a teflon coating or burn marks?"),
+            //Text("Is the item a pot, pan, baking tray, or has a teflon coating or burn marks?"),
+            Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Is the item a pot, pan, baking tray, or has a teflon coating or burn marks?",style: 
+                      new TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
             // Plastic
             Column(
               children: <Widget>[
@@ -2626,7 +2945,10 @@ class MixedScreen extends StatelessWidget {
         title: new Text("RecyclABLE"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget> [
+        /*
         Column(
           children: <Widget>[
             Text("Mixed Materials"),
@@ -2636,7 +2958,17 @@ class MixedScreen extends StatelessWidget {
             Your municipality's recycling center may have specified which mixed items it can recycle.
             """)
           ]
-        ),
+        ),*/
+        Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("""Unfortunately, recycling mixed items is complicated...\nTry separating the item into its homogeneous components, and recycling them individually.\nYour municipality's recycling center may have specified which mixed items it can recycle.""",style: 
+                      new TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
         Column(
           children: <Widget>[
           Text(" "),
@@ -2690,8 +3022,20 @@ class UnrecyclableScreen extends StatelessWidget {
         title: new Text("RecyclABLE"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text("Cannot be recycled"),
+          //Text("Cannot be recycled"),
+          Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Cannot be recycled :(",style: 
+                      new TextStyle(
+                        fontSize: 35.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
           Column(
             children: <Widget>[
               //Text("\nStart over?"),
@@ -2733,8 +3077,20 @@ class UnrecyclableSoiledScreen extends StatelessWidget {
         title: new Text("RecyclABLE"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text("Unfortunately, most soiled items cannot be recycled.\nTry to clean of the residue and restart."),
+          // Text("Unfortunately, most soiled items cannot be recycled.\nTry to clean of the residue and restart."),
+          Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Unfortunately, most soiled items cannot be recycled :( \nTry to clean of the residue and restart.",style: 
+                      new TextStyle(
+                        fontSize: 35.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
           Column(
             children: <Widget>[
               //rText("\nStart over?"),
@@ -2788,8 +3144,20 @@ class RecyclableScreen extends StatelessWidget {
         title: new Text("RecyclABLE"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text("Can be recycled!"),
+          //Text("Can be recycled!"),
+          Container(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: 
+                    Text("Can be recycled :)",style: 
+                      new TextStyle(
+                        fontSize: 35.0,
+                        color: Colors.green,
+                      )
+                    )
+                  ),
           Column(
             children: <Widget>[
               //Text("\nStart over?"),
