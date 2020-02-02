@@ -47,7 +47,29 @@ class HomeScreen extends StatelessWidget {
       body: Center(
           child: Column(
             children: <Widget>[
-              Text("Start"),
+              Text("Start!"),
+              FlatButton(
+                onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
+                    );
+                  },
+                shape: RoundedRectangleBorder(
+                 borderRadius: new BorderRadius.circular(18.0),
+                 side: BorderSide(color: Colors.grey)
+                ),
+                color: Colors.white,
+                padding: EdgeInsets.all(50.0),
+                
+                child: Text("Start", style: 
+                    new TextStyle(
+                      fontSize: 60.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                ),
+              /*
               IconButton(
                 icon: Icon(Icons.check),
                 tooltip: 'Start',
@@ -57,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                         new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
                     );
                 },
-              )
+              )*/
             ]
           )
         )
@@ -76,7 +98,28 @@ class SoiledScreen extends StatelessWidget {
           child: Column(
               children: <Widget>[
                   Text("Is the item soiled?"),
-                  IconButton(
+                  FlatButton(
+                  onPressed: () {
+                      Navigator.push(
+                          ctxt,
+                          new MyCustomRoute(builder: (ctxt) => new UnrecyclableSoiledScreen()),
+                      );
+                    },
+                  shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(50.0),
+                  
+                  child: Text("Yes", style: 
+                      new TextStyle(
+                        fontSize: 60.0,
+                        color: Colors.green,
+                      ),
+                    ),
+                  ),
+                  /*IconButton(
                     icon: Icon(Icons.check),
                     tooltip: 'No',
                     onPressed: () {
@@ -85,7 +128,29 @@ class SoiledScreen extends StatelessWidget {
                             new MyCustomRoute(builder: (ctxt) => new MaterialScreen()),
                         );
                     },
+                  ),*/
+                  FlatButton(
+                    onPressed: () {
+                      Navigator.push(
+                          ctxt,
+                          new MyCustomRoute(builder: (ctxt) => new MaterialScreen()),
+                      );
+                    },
+                  shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.grey)
                   ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(50.0),
+                  
+                  child: Text("No ", style: 
+                      new TextStyle(
+                        fontSize: 60.0,
+                        color: Colors.green,
+                      ),
+                    ),
+                  )
+                  /*
                   IconButton(
                     icon: Icon(Icons.cancel),
                     tooltip: 'Yes',
@@ -95,7 +160,7 @@ class SoiledScreen extends StatelessWidget {
                         new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                         );
                     },
-                  )
+                  )*/
               ]
           )
       )
@@ -117,7 +182,8 @@ class MaterialScreen extends StatelessWidget {
                   // Plastic
                   Column(
                     children: <Widget>[
-                      Text("Plastic"),
+                      //Text("Plastic"),
+                      /*
                       IconButton(
                         icon: Icon(Icons.crop_square),
                         tooltip: 'Plastic',
@@ -127,13 +193,57 @@ class MaterialScreen extends StatelessWidget {
                                 new MyCustomRoute(builder: (ctxt) => new PlasticScreen()),
                             );
                         },
+                      )*/
+                      
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                            ctxt,
+                            new MyCustomRoute(builder: (ctxt) => new PlasticScreen()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.grey)
                       ),
-                    ]
+                      color: Colors.white,
+                      padding: EdgeInsets.all(5.0),
+                    
+                      child: Text("Plastic", style: 
+                        new TextStyle(
+                          fontSize: 30.0,
+                          color: Colors.green,
+                        ),
+                      ),
+                    ),
+                  ]
                   ),
                   // Glass
                   Column(
                     children: <Widget>[
-                      Text("Glass"),
+                      //Text("Glass"),
+                      FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                            ctxt,
+                            new MyCustomRoute(builder: (ctxt) => new GlassScreen()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.grey)
+                      ),
+                      color: Colors.white,
+                      padding: EdgeInsets.all(5.0),
+                    
+                      child: Text("Glass", style: 
+                        new TextStyle(
+                          fontSize: 30.0,
+                          color: Colors.green,
+                        ),
+                      ),
+                    )
+                      /*
                       IconButton(
                         icon: Icon(Icons.crop_square),
                         tooltip: 'Glass',
@@ -143,13 +253,35 @@ class MaterialScreen extends StatelessWidget {
                                 new MyCustomRoute(builder: (ctxt) => new GlassScreen()),
                             );
                         },
-                      ),
+                      )*/,
                     ]
                   ),
                   // Cardboard
                   Column(
                     children: <Widget>[
-                      Text("Cardboard"),
+                      //Text("Cardboard"),
+                      FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                            ctxt,
+                            new MyCustomRoute(builder: (ctxt) => new CardboardScreen()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.grey)
+                      ),
+                      color: Colors.white,
+                      padding: EdgeInsets.all(5.0),
+                    
+                      child: Text("Cardboard", style: 
+                        new TextStyle(
+                          fontSize: 30.0,
+                          color: Colors.green,
+                        ),
+                      ),
+                    )
+                      /*
                       IconButton(
                         icon: Icon(Icons.crop_square),
                         tooltip: 'Cardboard',
@@ -159,13 +291,35 @@ class MaterialScreen extends StatelessWidget {
                                 new MyCustomRoute(builder: (ctxt) => new CardboardScreen()),
                             );
                         },
-                      ),
+                      )*/,
                     ]
                   ),
                   // Paper
                   Column(
                     children: <Widget>[
-                      Text("Paper"),
+                      //Text("Paper"),
+                      FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                            ctxt,
+                            new MyCustomRoute(builder: (ctxt) => new PaperScreen()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.grey)
+                      ),
+                      color: Colors.white,
+                      padding: EdgeInsets.all(5.0),
+                    
+                      child: Text("Paper", style: 
+                        new TextStyle(
+                          fontSize: 30.0,
+                          color: Colors.green,
+                        ),
+                      ),
+                    )
+                      /*
                       IconButton(
                         icon: Icon(Icons.crop_square),
                         tooltip: 'Paper',
@@ -175,13 +329,35 @@ class MaterialScreen extends StatelessWidget {
                                 new MyCustomRoute(builder: (ctxt) => new PaperScreen()),
                             );
                         },
-                      ),
+                      )*/,
                     ]
                   ),
                   // Metal
                   Column(
                       children: <Widget>[
-                        Text("Metal"),
+                        //Text("Metal"),
+                        FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                            ctxt,
+                            new MyCustomRoute(builder: (ctxt) => new MetalScreen()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.grey)
+                      ),
+                      color: Colors.white,
+                      padding: EdgeInsets.all(5.0),
+                    
+                      child: Text("Metal", style: 
+                        new TextStyle(
+                          fontSize: 30.0,
+                          color: Colors.green,
+                        ),
+                      ),
+                    )
+                        /*
                         IconButton(
                           icon: Icon(Icons.crop_square),
                           tooltip: 'Metal',
@@ -191,13 +367,35 @@ class MaterialScreen extends StatelessWidget {
                                   new MyCustomRoute(builder: (ctxt) => new MetalScreen()),
                               );
                           },
-                        ),
+                        )*/,
                       ]
                     ),
                   // Mixed
                   Column(
                     children: <Widget>[
-                      Text("Mixed"),
+                      //Text("Mixed"),
+                      FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                              ctxt,
+                              new MyCustomRoute(builder: (ctxt) => new MixedScreen()),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(18.0),
+                          side: BorderSide(color: Colors.grey)
+                        ),
+                        color: Colors.white,
+                        padding: EdgeInsets.all(5.0),
+                      
+                        child: Text("Mixed", style: 
+                          new TextStyle(
+                            fontSize: 30.0,
+                            color: Colors.green,
+                          ),
+                        ),
+                      )
+                      /*
                       IconButton(
                         icon: Icon(Icons.crop_square),
                         tooltip: 'Plastic',
@@ -207,13 +405,35 @@ class MaterialScreen extends StatelessWidget {
                                 new MyCustomRoute(builder: (ctxt) => new MixedScreen()),
                             );
                         },
-                      ),
+                      )*/,
                     ]
                   ),
                   // Rubber
                   Column(
                     children: <Widget>[
-                      Text("Rubber and other materials"),
+                      //Text("Rubber and other materials"),
+                      FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                              ctxt,
+                              new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                          );
+                        },
+                        shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(18.0),
+                          side: BorderSide(color: Colors.grey)
+                        ),
+                        color: Colors.white,
+                        padding: EdgeInsets.all(5.0),
+                      
+                        child: Text("Rubber and\nother materials", style: 
+                          new TextStyle(
+                            fontSize: 30.0,
+                            color: Colors.green,
+                          ),
+                        ),
+                      )
+                      /*
                       IconButton(
                         icon: Icon(Icons.crop_square),
                         tooltip: 'Rubber',
@@ -223,7 +443,7 @@ class MaterialScreen extends StatelessWidget {
                                 new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                             );
                         },
-                      ),
+                      )*/,
                     ]
                   ),
               ]
@@ -249,7 +469,29 @@ class PlasticScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Soft Plastic"),
+                //Text("Soft Plastic"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new SoftPlasticScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Soft Plastic", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Soft Plastic',
@@ -259,13 +501,35 @@ class PlasticScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new SoftPlasticScreen()),
                       );
                   },
-                ),
+                )*/,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("Hard Plastic"),
+                //Text("Hard Plastic"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new HardPlasticScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Hard Plastic", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Hard Plastic',
@@ -275,7 +539,7 @@ class PlasticScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new HardPlasticScreen()),
                       );
                   },
-                ),
+                )*/,
               ]
             ),
           ],
@@ -299,7 +563,29 @@ class SoftPlasticScreen extends StatelessWidget {
             // Waxy/Greasy
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.check),
                   tooltip: 'Waxy or Greasy Soft Plastic',
@@ -309,13 +595,35 @@ class SoftPlasticScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/,
               ]
             ),
             // Not Waxy/greasy
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new ClingScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Not Waxy or Greasy Soft Plastic',
@@ -325,7 +633,7 @@ class SoftPlasticScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new ClingScreen()),
                       );
                   },
-                ),
+                )*/,
               ]
             ),
           ],
@@ -349,7 +657,29 @@ class ClingScreen extends StatelessWidget {
             // Waxy/Greasy
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.check),
                   tooltip: 'Cling',
@@ -359,13 +689,36 @@ class ClingScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Not Waxy/greasy
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Not Cling',
@@ -375,7 +728,8 @@ class ClingScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -399,7 +753,29 @@ class HardPlasticScreen extends StatelessWidget {
             // Waxy/Greasy
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.check),
                   tooltip: 'is#6',
@@ -409,13 +785,36 @@ class HardPlasticScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                ) */
+                ,
               ]
             ),
             // Not Waxy/greasy
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new HardPlasticPastScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Hard Plastic but not #6',
@@ -425,12 +824,35 @@ class HardPlasticScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new HardPlasticPastScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             Column(
               children: <Widget>[
-                Text("I don't know/can't find the number"),
+                //Text("I don't know/can't find the number"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("I don't know or\ncan't find the number", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.check),
                   tooltip: 'IDK',
@@ -440,7 +862,8 @@ class HardPlasticScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Not Waxy/greasy
@@ -465,7 +888,29 @@ class HardPlasticPastScreen extends StatelessWidget {
             // Waxy/Greasy
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.check),
                   tooltip: 'PTOC',
@@ -475,13 +920,36 @@ class HardPlasticPastScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Not Waxy/greasy
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Hard Plastic that can be recycled',
@@ -491,7 +959,8 @@ class HardPlasticPastScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Not Waxy/greasy
@@ -518,7 +987,29 @@ class GlassScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Eating glass',
@@ -528,13 +1019,36 @@ class GlassScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new FlatGlassScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Non-eating glass',
@@ -544,7 +1058,8 @@ class GlassScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new FlatGlassScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -568,7 +1083,29 @@ class FlatGlassScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Mirror or window',
@@ -578,13 +1115,37 @@ class FlatGlassScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new LightBulbScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Non mirror or window',
@@ -594,7 +1155,7 @@ class FlatGlassScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new LightBulbScreen()),
                       );
                   },
-                ),
+                )*/,
               ]
             ),
           ],
@@ -618,7 +1179,29 @@ class LightBulbScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableLightBulbScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'lightbulb',
@@ -628,13 +1211,36 @@ class LightBulbScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableLightBulbScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new PyrexScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Non lightbulb',
@@ -644,7 +1250,8 @@ class LightBulbScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new PyrexScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -661,9 +1268,40 @@ class UnrecyclableLightBulbScreen extends StatelessWidget {
       appBar: new AppBar(
         title: new Text("<APP NAME>"),
       ),
-      body: new Text("""Lightbulbs can't be recycled with other commonly recyclable items.
-      Some of your local furniture stores may offer a lightbulb recycling service. 
-      Please consider options in your vicinity!"""),
+      body: Column(
+        children: <Widget>[
+          Text("""Lightbulbs can't be recycled with other commonly recyclable items.
+                Some of your local furniture stores may offer a lightbulb recycling service. 
+                Please consider options in your vicinity!"""),
+          Column(
+            children: <Widget>[
+              //Text("\nStart over?"),
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      ctxt,
+                      new MyCustomRoute(builder: (ctxt) => new HomeScreen()),
+                  );
+                },
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.grey)
+              ),
+              color: Colors.white,
+              padding: EdgeInsets.all(50.0),
+              
+              child: Text("Start Over?", style: 
+                  new TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+            ]
+          ),
+
+        ]  
+      )
     );
   }
 }
@@ -682,8 +1320,29 @@ class PyrexScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
-                IconButton(
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Pyrex',
                   onPressed: () {
@@ -692,13 +1351,36 @@ class PyrexScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Non Pyrex',
@@ -708,7 +1390,8 @@ class PyrexScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -735,6 +1418,28 @@ class CardboardScreen extends StatelessWidget {
             Column(
               children: <Widget>[
                 Text("Flat Cardboard"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new FlatCardboardScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Flat Cardboard", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Flat Cardboard',
@@ -744,13 +1449,36 @@ class CardboardScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new FlatCardboardScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("Folded Cardboard"),
+                //Text("Folded Cardboard"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new FoldedCardboardScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Folded Cardboard", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Folded Cardboard',
@@ -760,7 +1488,8 @@ class CardboardScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new FoldedCardboardScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -784,7 +1513,29 @@ class FlatCardboardScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("No"),
+                // Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Recyclable Cardboard',
@@ -794,13 +1545,36 @@ class FlatCardboardScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("Yes"),
+                // Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Cardboard with Residue',
@@ -810,7 +1584,8 @@ class FlatCardboardScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -835,7 +1610,31 @@ class FoldedCardboardScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Recyclable Cardboard',
@@ -845,13 +1644,36 @@ class FoldedCardboardScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Cardboard with Residue',
@@ -861,7 +1683,8 @@ class FoldedCardboardScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new CardboardWithResidueScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -899,7 +1722,29 @@ class PaperScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Recyclable Paper',
@@ -909,13 +1754,36 @@ class PaperScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new PaperStickerScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Other type of paper',
@@ -925,7 +1793,8 @@ class PaperScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new PaperStickerScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -949,7 +1818,29 @@ class PaperStickerScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new EnvelopeTypeScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Envelope Type Paper',
@@ -959,13 +1850,36 @@ class PaperStickerScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new EnvelopeTypeScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new FoilWrappingCoatingPaperScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Non-Envelope Type Paper',
@@ -975,7 +1889,8 @@ class PaperStickerScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new FoilWrappingCoatingPaperScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -999,7 +1914,29 @@ class EnvelopeTypeScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new EnvelopeScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Envelope',
@@ -1009,13 +1946,36 @@ class EnvelopeTypeScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new EnvelopeScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Non Recyclable Paper',
@@ -1025,7 +1985,8 @@ class EnvelopeTypeScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -1049,7 +2010,29 @@ class EnvelopeScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                // Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Padded Envelope',
@@ -1059,13 +2042,36 @@ class EnvelopeScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                // Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Recyclable Paper',
@@ -1075,7 +2081,8 @@ class EnvelopeScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -1099,7 +2106,29 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Padded Envelope',
@@ -1109,13 +2138,36 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Recyclable Paper',
@@ -1125,7 +2177,8 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -1151,7 +2204,29 @@ class MetalScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new ElectronicBatteryScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Electronic or Battery',
@@ -1161,22 +2236,34 @@ class MetalScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new ElectronicBatteryScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
-                IconButton(
-                  icon: Icon(Icons.crop_square),
-                  tooltip: 'Non Electronic',
+                //Text("No"),
+                FlatButton(
                   onPressed: () {
-                      Navigator.push(
-                          ctxt,
-                          new MyCustomRoute(builder: (ctxt) => new NonElectronicScreen()),
-                      );
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new NonElectronicScreen()),
+                    );
                   },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
                 ),
               ]
             ),
@@ -1195,12 +2282,47 @@ class ElectronicBatteryScreen extends StatelessWidget {
         title: new Text("<APP NAME>"),
       ),
       body: Column(
-        children: <Widget>[
-          Text("Electronics and Batteries"),
-          Text("""
-          "Unfortunately, recycling electronics and batteries can be complicated...
-          Please consult your municipal guide.
-          """)
+        children: <Widget> [
+        Column(
+          children: <Widget>[
+            Text("Electronics and Batteries"),
+            Text("""
+            Unfortunately, recycling electronics and batteries can be complicated...
+            Please consult your municipal guide.
+            """)
+          ]
+        ),
+        Column(
+          children: <Widget>[
+          Text(" "),
+          Column(
+            children: <Widget>[
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      ctxt,
+                      new MyCustomRoute(builder: (ctxt) => new HomeScreen()),
+                  );
+                },
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.grey)
+              ),
+              color: Colors.white,
+              padding: EdgeInsets.all(50.0),
+              
+              child: Text("Start Over?", style: 
+                  new TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+            ]
+          ),
+
+        ]
+        )
         ]  
       )
     );
@@ -1221,7 +2343,29 @@ class NonElectronicScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Scrap, nails, screws, and pipes',
@@ -1231,13 +2375,36 @@ class NonElectronicScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new MoreMetalScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Hard Plastic',
@@ -1247,7 +2414,8 @@ class NonElectronicScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new MoreMetalScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -1271,8 +2439,29 @@ class MoreMetalScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
-                IconButton(
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Contained hazardous compounds',
                   onPressed: () {
@@ -1281,13 +2470,36 @@ class MoreMetalScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new PotsPansScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Hard Plastic',
@@ -1297,7 +2509,8 @@ class MoreMetalScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new PotsPansScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -1321,7 +2534,29 @@ class PotsPansScreen extends StatelessWidget {
             // Plastic
             Column(
               children: <Widget>[
-                Text("Yes"),
+                //Text("Yes"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("Yes", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Used in cooking or teflon/burn marks',
@@ -1331,13 +2566,36 @@ class PotsPansScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new UnrecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
             // Glass
             Column(
               children: <Widget>[
-                Text("No"),
+                //Text("No"),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
+                    );
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.grey)
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(15.0),
+                
+                  child: Text("No ", style: 
+                    new TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                )
+                /*
                 IconButton(
                   icon: Icon(Icons.crop_square),
                   tooltip: 'Hard Plastic',
@@ -1347,7 +2605,8 @@ class PotsPansScreen extends StatelessWidget {
                           new MyCustomRoute(builder: (ctxt) => new RecyclableScreen()),
                       );
                   },
-                ),
+                )*/
+                ,
               ]
             ),
           ],
@@ -1367,16 +2626,56 @@ class MixedScreen extends StatelessWidget {
         title: new Text("<APP NAME>"),
       ),
       body: Column(
+        children: <Widget> [
+        Column(
+          children: <Widget>[
+            Text("Mixed Materials"),
+            Text("""
+            Unfortunately, recycling mixed items is complicated...
+            Try separating the item into its homogeneous components, and recycling them individually.
+            Your municipality's recycling center may have specified which mixed items it can recycle.
+            """)
+          ]
+        ),
+        Column(
+          children: <Widget>[
+          Text(" "),
+          Column(
+            children: <Widget>[
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      ctxt,
+                      new MyCustomRoute(builder: (ctxt) => new HomeScreen()),
+                  );
+                },
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.grey)
+              ),
+              color: Colors.white,
+              padding: EdgeInsets.all(50.0),
+              
+              child: Text("Start Over?", style: 
+                  new TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+            ]
+          ),
+
+        ]
+        )
+        ]  
+      )
+      /*body: Column(
         children: <Widget>[
-          Text("Mixed Materials"),
-          Text("""
-          Unfortunately, recycling mixed items is complicated...
-          Try separating the item into its homogeneous components, and recycling them individually.
-          Your municipality's recycling center may have specified which mixed items it can recycle.
-          """)
+          
         ]
           
-      )
+      )*/
     );
   }
 }
@@ -1395,16 +2694,27 @@ class UnrecyclableScreen extends StatelessWidget {
           Text("Cannot be recycled"),
           Column(
             children: <Widget>[
-              Text("\nStart over?"),
-              IconButton(
-                icon: Icon(Icons.question_answer),
-                tooltip: 'Start Over',
+              //Text("\nStart over?"),
+              FlatButton(
                 onPressed: () {
-                    Navigator.push(
-                        ctxt,
-                        new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
-                    );
+                  Navigator.push(
+                      ctxt,
+                      new MyCustomRoute(builder: (ctxt) => new HomeScreen()),
+                  );
                 },
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.grey)
+              ),
+              color: Colors.white,
+              padding: EdgeInsets.all(50.0),
+              
+              child: Text("Start Over?", style: 
+                  new TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.green,
+                  ),
+                ),
               ),
             ]
           ),
@@ -1415,7 +2725,7 @@ class UnrecyclableScreen extends StatelessWidget {
   }
 }
 
-class RecyclableScreen extends StatelessWidget {
+class UnrecyclableSoiledScreen extends StatelessWidget {
   @override
   Widget build (BuildContext ctxt) {
     return new Scaffold(
@@ -1424,10 +2734,32 @@ class RecyclableScreen extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Text("Can be recycled"),
+          Text("Unfortunately, most soiled items cannot be recycled.\nTry to clean of the residue and restart."),
           Column(
             children: <Widget>[
-              Text("\nStart over?"),
+              //rText("\nStart over?"),
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      ctxt,
+                      new MyCustomRoute(builder: (ctxt) => new HomeScreen()),
+                  );
+                },
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.grey)
+              ),
+              color: Colors.white,
+              padding: EdgeInsets.all(50.0),
+              
+              child: Text("Start Over?", style: 
+                  new TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.green,
+                  ),
+                ),
+              )
+              /*
               IconButton(
                 icon: Icon(Icons.question_answer),
                 tooltip: 'Start Over',
@@ -1437,7 +2769,62 @@ class RecyclableScreen extends StatelessWidget {
                         new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
                     );
                 },
+              )*/,
+            ]
+          ),
+
+        ]  
+      )
+    );
+  }
+}
+
+
+class RecyclableScreen extends StatelessWidget {
+  @override
+  Widget build (BuildContext ctxt) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("<APP NAME>"),
+      ),
+      body: Column(
+        children: <Widget>[
+          Text("Can be recycled!"),
+          Column(
+            children: <Widget>[
+              //Text("\nStart over?"),
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      ctxt,
+                      new MyCustomRoute(builder: (ctxt) => new HomeScreen()),
+                  );
+                },
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.grey)
               ),
+              color: Colors.white,
+              padding: EdgeInsets.all(50.0),
+              
+              child: Text("Start Over?", style: 
+                  new TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.green,
+                  ),
+                ),
+              )
+              /*
+              IconButton(
+                icon: Icon(Icons.question_answer),
+                tooltip: 'Start Over',
+                onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
+                    );
+                },
+              )*/,
             ]
           ),
 
