@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
       body: Center(
           child: Column(
             children: <Widget>[
-              Text("Start!"),
+              Text("Start?"),
               FlatButton(
                 onPressed: () {
                     Navigator.push(
@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
                 padding: EdgeInsets.all(50.0),
                 
-                child: Text("Start", style: 
+                child: Text("Start!", style: 
                     new TextStyle(
                       fontSize: 60.0,
                       color: Colors.green,
