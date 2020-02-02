@@ -26,26 +26,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext ctxt) {
     
     return new MaterialApp(
-<<<<<<< HEAD
-      home: new HomeScreen(), 
-      theme: ThemeData(
-        primaryColor: Colors.green,
-        //brightness: Brightness.light,
-        //backgroundColor: Colors.white, 
-        //fontFamily: 'Roboto Slab', 
-        
-        //accentColor: Color(#10000),
-      ),
-=======
       home: new HomeScreen(),
       theme: ThemeData(
         brightness:     Brightness.light,
-        primaryColor:   Color(0xFFFF9000),
-        accentColor:    Color(0xFFFF9000),
+        primaryColor:   Colors.green,
+        accentColor:    Colors.green,
         fontFamily: 'Roboto',
 
       )
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
     );
   }
 }
@@ -55,25 +43,19 @@ class HomeScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e")
-=======
         title: new Text("RecyclABLE")
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
           child: Column(
+            
             children: <Widget>[
-<<<<<<< HEAD
-              SizedBox(height: 200),
-=======
 
               Center(
                 child: 
                 Container(
                   padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                   child: 
-                    Text("Start?",style: 
+                    Text("\n\n\n",style: 
                       new TextStyle(
                         fontSize: 30.0,
                         color: Colors.green,
@@ -82,47 +64,29 @@ class HomeScreen extends StatelessWidget {
                 )
               ),
               
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
               FlatButton(
                 onPressed: () {
                     Navigator.push(
                         ctxt,
-<<<<<<< HEAD
-                        new MaterialPageRoute(builder: (ctxt) => new SoiledScreen()),
-=======
                         new MyCustomRoute(builder: (ctxt) => new SoiledScreen()),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
                     );
                   },
                 shape: RoundedRectangleBorder(
                  borderRadius: new BorderRadius.circular(18.0),
                  side: BorderSide(color: Colors.grey)
-<<<<<<< HEAD
-                 ),
-                color: Colors.white,
-                padding: EdgeInsets.all(50.0),
-                
-                child: Text("Start", style: 
-=======
                 ),
                 color: Colors.white,
-                padding: EdgeInsets.all(50.0),
+                padding: EdgeInsets.all(20.0),
                 
                 child: Text("Start!", style: 
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
                     new TextStyle(
-                      fontSize: 60.0,
+                      fontSize: 30.0,
                       color: Colors.green,
                     ),
                   ),
                 ),
-<<<<<<< HEAD
-              SizedBox(height: 30),
-              /*IconButton(
-=======
               /*
               IconButton(
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
                 icon: Icon(Icons.check),
                 tooltip: 'Start',
                 onPressed: () {
@@ -144,11 +108,7 @@ class SoiledScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
           child: Column(
@@ -162,7 +122,7 @@ class SoiledScreen extends StatelessWidget {
                       child: 
                         Text("Is the item soiled\n(with food waste, dirt, dust, or any other residue)?",style: 
                           new TextStyle(
-                            fontSize: 30.0,
+                            fontSize: 20.0,
                             color: Colors.green,
                           )
                         )
@@ -180,11 +140,11 @@ class SoiledScreen extends StatelessWidget {
                   side: BorderSide(color: Colors.grey)
                   ),
                   color: Colors.white,
-                  padding: EdgeInsets.all(50.0),
+                  padding: EdgeInsets.all(25.0),
                   
                   child: Text("Yes", style: 
                       new TextStyle(
-                        fontSize: 60.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       ),
                     ),
@@ -211,11 +171,11 @@ class SoiledScreen extends StatelessWidget {
                   side: BorderSide(color: Colors.grey)
                   ),
                   color: Colors.white,
-                  padding: EdgeInsets.all(50.0),
+                  padding: EdgeInsets.all(25.0),
                   
                   child: Text("No ", style: 
                       new TextStyle(
-                        fontSize: 60.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       ),
                     ),
@@ -243,11 +203,7 @@ class MaterialScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
           child: Column(
@@ -259,7 +215,7 @@ class MaterialScreen extends StatelessWidget {
                   child: 
                     Text("What is the item made of??",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -287,7 +243,7 @@ class MaterialScreen extends StatelessWidget {
                     
                       child: Text("Plastic", style: 
                         new TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Colors.green,
                         ),
                       ),
@@ -314,7 +270,7 @@ class MaterialScreen extends StatelessWidget {
                     
                       child: Text("Glass", style: 
                         new TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Colors.green,
                         ),
                       ),
@@ -352,7 +308,7 @@ class MaterialScreen extends StatelessWidget {
                     
                       child: Text("Cardboard", style: 
                         new TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Colors.green,
                         ),
                       ),
@@ -390,7 +346,7 @@ class MaterialScreen extends StatelessWidget {
                     
                       child: Text("Paper", style: 
                         new TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Colors.green,
                         ),
                       ),
@@ -428,7 +384,7 @@ class MaterialScreen extends StatelessWidget {
                     
                       child: Text("Metal", style: 
                         new TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Colors.green,
                         ),
                       ),
@@ -466,7 +422,7 @@ class MaterialScreen extends StatelessWidget {
                       
                         child: Text("Mixed", style: 
                           new TextStyle(
-                            fontSize: 30.0,
+                            fontSize: 20.0,
                             color: Colors.green,
                           ),
                         ),
@@ -504,7 +460,7 @@ class MaterialScreen extends StatelessWidget {
                       
                         child: Text("Rubber and\nother materials", style: 
                           new TextStyle(
-                            fontSize: 30.0,
+                            fontSize: 20.0,
                             color: Colors.green,
                           ),
                         ),
@@ -536,11 +492,7 @@ class PlasticScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -554,7 +506,7 @@ class PlasticScreen extends StatelessWidget {
                   child: 
                     Text("Is the item made of soft or hard plastic?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -579,7 +531,7 @@ class PlasticScreen extends StatelessWidget {
                 
                   child: Text("Soft Plastic", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -607,7 +559,7 @@ class PlasticScreen extends StatelessWidget {
                 
                   child: Text("Hard Plastic", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -626,11 +578,7 @@ class SoftPlasticScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -644,7 +592,7 @@ class SoftPlasticScreen extends StatelessWidget {
                   child: 
                     Text("Is the item made of greasy/waxy plastic?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -671,7 +619,7 @@ class SoftPlasticScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -709,7 +657,7 @@ class SoftPlasticScreen extends StatelessWidget {
                 
                   child: Text("No", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -739,11 +687,7 @@ class ClingScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -756,7 +700,7 @@ class ClingScreen extends StatelessWidget {
                   child: 
                     Text("Is the item made of cling film/plastic?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -781,7 +725,7 @@ class ClingScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -820,7 +764,7 @@ class ClingScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -851,11 +795,7 @@ class HardPlasticScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -868,7 +808,7 @@ class HardPlasticScreen extends StatelessWidget {
                   child: 
                     Text("Is the number inside the triangle #6?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -893,7 +833,7 @@ class HardPlasticScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -920,7 +860,7 @@ class HardPlasticScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -958,7 +898,7 @@ class HardPlasticScreen extends StatelessWidget {
                 
                   child: Text("I don't know or\ncan't find the number", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -990,11 +930,7 @@ class HardPlasticPastScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1007,7 +943,7 @@ class HardPlasticPastScreen extends StatelessWidget {
                   child: 
                     Text("Has the item contained paint, toothpaste, oil, or CDs?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1032,7 +968,7 @@ class HardPlasticPastScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1071,7 +1007,7 @@ class HardPlasticPastScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1105,11 +1041,7 @@ class GlassScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1122,7 +1054,7 @@ class GlassScreen extends StatelessWidget {
                   child: 
                     Text("Is the item a glass plate or drinking glass?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1147,7 +1079,7 @@ class GlassScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1186,7 +1118,7 @@ class GlassScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1217,11 +1149,7 @@ class FlatGlassScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1234,7 +1162,7 @@ class FlatGlassScreen extends StatelessWidget {
                   child: 
                     Text("Is the item a window or a mirror?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1259,7 +1187,7 @@ class FlatGlassScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1299,7 +1227,7 @@ class FlatGlassScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1329,11 +1257,7 @@ class LightBulbScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1346,7 +1270,7 @@ class LightBulbScreen extends StatelessWidget {
                   child: 
                     Text("Is the item a lightbulb?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1371,7 +1295,7 @@ class LightBulbScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1410,7 +1334,7 @@ class LightBulbScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1441,11 +1365,7 @@ class UnrecyclableLightBulbScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -1461,7 +1381,7 @@ class UnrecyclableLightBulbScreen extends StatelessWidget {
                   child: 
                     Text("""Lightbulbs can't be recycled with other commonly recyclable items.\nSome of your local furniture stores may offer a lightbulb recycling service.\nPlease consider options in your vicinity!""",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1481,11 +1401,11 @@ class UnrecyclableLightBulbScreen extends StatelessWidget {
               side: BorderSide(color: Colors.grey)
               ),
               color: Colors.white,
-              padding: EdgeInsets.all(50.0),
+              padding: EdgeInsets.all(25.0),
               
               child: Text("Start Over?", style: 
                   new TextStyle(
-                    fontSize: 60.0,
+                    fontSize: 20.0,
                     color: Colors.green,
                   ),
                 ),
@@ -1504,11 +1424,7 @@ class PyrexScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1521,7 +1437,7 @@ class PyrexScreen extends StatelessWidget {
                   child: 
                     Text("Is the item made of pyrex?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1546,7 +1462,7 @@ class PyrexScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1584,7 +1500,7 @@ class PyrexScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1617,11 +1533,7 @@ class CardboardScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1634,7 +1546,7 @@ class CardboardScreen extends StatelessWidget {
                   child: 
                     Text("Is the item flat or folded?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1659,7 +1571,7 @@ class CardboardScreen extends StatelessWidget {
                 
                   child: Text("Flat Cardboard", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1698,7 +1610,7 @@ class CardboardScreen extends StatelessWidget {
                 
                   child: Text("Folded Cardboard", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1729,11 +1641,7 @@ class FlatCardboardScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1746,7 +1654,7 @@ class FlatCardboardScreen extends StatelessWidget {
                   child: 
                     Text("Are there bits of tape, stickers, or glue residue on the cardboard?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1771,7 +1679,7 @@ class FlatCardboardScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1810,7 +1718,7 @@ class FlatCardboardScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1841,11 +1749,7 @@ class FoldedCardboardScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -1857,7 +1761,7 @@ class FoldedCardboardScreen extends StatelessWidget {
                   child: 
                     Text("Un-fold the cardboard item, and then proceed:\n\nAre there bits of tape, stickers, or glue residue on the cardboard?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1885,7 +1789,7 @@ class FoldedCardboardScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1925,7 +1829,7 @@ class FoldedCardboardScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -1956,11 +1860,7 @@ class CardboardWithResidueScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: 
       //new Text("Remove the tape, stickers, or glue residue\n(or cut out relevant pieces of cardboard)\nand then the cardboard can be recycled!"),
@@ -1973,7 +1873,7 @@ Container(
                   child: 
                     Text("Remove the tape, stickers, or glue residue\n(or cut out relevant pieces of cardboard)\nand then the cardboard can be recycled!",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -1990,11 +1890,11 @@ Container(
               side: BorderSide(color: Colors.grey)
               ),
               color: Colors.white,
-              padding: EdgeInsets.all(50.0),
+              padding: EdgeInsets.all(25.0),
               
               child: Text("Start Over?", style: 
                   new TextStyle(
-                    fontSize: 60.0,
+                    fontSize: 20.0,
                     color: Colors.green,
                   ),
                 ),
@@ -2013,11 +1913,7 @@ class PaperScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2030,7 +1926,7 @@ class PaperScreen extends StatelessWidget {
                   child: 
                     Text("Is the item a newspaper, magazine, or made of standard paper?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2055,7 +1951,7 @@ class PaperScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2094,7 +1990,7 @@ class PaperScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2125,11 +2021,7 @@ class PaperStickerScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2142,7 +2034,7 @@ class PaperStickerScreen extends StatelessWidget {
                   child: 
                     Text("Are there stickers or adhesive residue on the item?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2167,7 +2059,7 @@ class PaperStickerScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2206,7 +2098,7 @@ class PaperStickerScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2237,11 +2129,7 @@ class EnvelopeTypeScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2254,7 +2142,7 @@ class EnvelopeTypeScreen extends StatelessWidget {
                   child: 
                     Text("Is the item a type of envelope?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2279,7 +2167,7 @@ class EnvelopeTypeScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2318,7 +2206,7 @@ class EnvelopeTypeScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2349,11 +2237,7 @@ class EnvelopeScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2366,7 +2250,7 @@ class EnvelopeScreen extends StatelessWidget {
                   child: 
                     Text("Is the envelope padded?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2391,7 +2275,7 @@ class EnvelopeScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2430,7 +2314,7 @@ class EnvelopeScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2461,11 +2345,7 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2478,7 +2358,7 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
                   child: 
                     Text("Is the item made of plastic-coated/plastic-lined paper or made of wrapping paper?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2503,7 +2383,7 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2542,7 +2422,7 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2575,11 +2455,7 @@ class MetalScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2592,7 +2468,7 @@ class MetalScreen extends StatelessWidget {
                   child: 
                     Text("Is an electronic item or a battery?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2617,7 +2493,7 @@ class MetalScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2656,7 +2532,7 @@ class MetalScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2675,11 +2551,7 @@ class ElectronicBatteryScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -2700,7 +2572,7 @@ class ElectronicBatteryScreen extends StatelessWidget {
                   child: 
                     Text("""Unfortunately, recycling electronics and batteries can be complicated...\nPlease consult your municipal guide.""",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2722,11 +2594,11 @@ class ElectronicBatteryScreen extends StatelessWidget {
               side: BorderSide(color: Colors.grey)
               ),
               color: Colors.white,
-              padding: EdgeInsets.all(50.0),
+              padding: EdgeInsets.all(25.0),
               
               child: Text("Start Over?", style: 
                   new TextStyle(
-                    fontSize: 60.0,
+                    fontSize: 20.0,
                     color: Colors.green,
                   ),
                 ),
@@ -2747,11 +2619,7 @@ class NonElectronicScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2764,7 +2632,7 @@ class NonElectronicScreen extends StatelessWidget {
                   child: 
                     Text("Is the item made of scrap metal, nails, screws, or pipes?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2789,7 +2657,7 @@ class NonElectronicScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2828,7 +2696,7 @@ class NonElectronicScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2859,11 +2727,7 @@ class MoreMetalScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2876,7 +2740,7 @@ class MoreMetalScreen extends StatelessWidget {
                   child: 
                     Text("Has the item ever contained paints, solvents, aerosols, toxins, or hazardous chemicals?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -2901,7 +2765,7 @@ class MoreMetalScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2939,7 +2803,7 @@ class MoreMetalScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -2970,11 +2834,7 @@ class PotsPansScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Center(
         child: Column(
@@ -2987,7 +2847,7 @@ class PotsPansScreen extends StatelessWidget {
                   child: 
                     Text("Is the item a pot, pan, baking tray, or has a teflon coating or burn marks?",style: 
                       new TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -3012,7 +2872,7 @@ class PotsPansScreen extends StatelessWidget {
                 
                   child: Text("Yes", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -3051,7 +2911,7 @@ class PotsPansScreen extends StatelessWidget {
                 
                   child: Text("No ", style: 
                     new TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 20.0,
                       color: Colors.green,
                     ),
                   ),
@@ -3084,11 +2944,7 @@ class MixedScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -3132,11 +2988,11 @@ class MixedScreen extends StatelessWidget {
               side: BorderSide(color: Colors.grey)
               ),
               color: Colors.white,
-              padding: EdgeInsets.all(50.0),
+              padding: EdgeInsets.all(25.0),
               
               child: Text("Start Over?", style: 
                   new TextStyle(
-                    fontSize: 60.0,
+                    fontSize: 20.0,
                     color: Colors.green,
                   ),
                 ),
@@ -3165,11 +3021,7 @@ class UnrecyclableScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -3201,11 +3053,11 @@ class UnrecyclableScreen extends StatelessWidget {
               side: BorderSide(color: Colors.grey)
               ),
               color: Colors.white,
-              padding: EdgeInsets.all(50.0),
+              padding: EdgeInsets.all(25.0),
               
               child: Text("Start Over?", style: 
                   new TextStyle(
-                    fontSize: 60.0,
+                    fontSize: 20.0,
                     color: Colors.green,
                   ),
                 ),
@@ -3236,7 +3088,7 @@ class UnrecyclableSoiledScreen extends StatelessWidget {
                   child: 
                     Text("Unfortunately, most soiled items cannot be recycled :( \nTry to clean of the residue and restart.",style: 
                       new TextStyle(
-                        fontSize: 35.0,
+                        fontSize: 20.0,
                         color: Colors.green,
                       )
                     )
@@ -3256,11 +3108,11 @@ class UnrecyclableSoiledScreen extends StatelessWidget {
               side: BorderSide(color: Colors.grey)
               ),
               color: Colors.white,
-              padding: EdgeInsets.all(50.0),
+              padding: EdgeInsets.all(25.0),
               
               child: Text("Start Over?", style: 
                   new TextStyle(
-                    fontSize: 60.0,
+                    fontSize: 20.0,
                     color: Colors.green,
                   ),
                 ),
@@ -3291,11 +3143,7 @@ class RecyclableScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-<<<<<<< HEAD
-        title: new Text("r e c y c l a g e"),
-=======
         title: new Text("RecyclABLE"),
->>>>>>> a6f96c402207fa8a952e9e0f19d8a19405271bad
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -3327,11 +3175,11 @@ class RecyclableScreen extends StatelessWidget {
               side: BorderSide(color: Colors.grey)
               ),
               color: Colors.white,
-              padding: EdgeInsets.all(50.0),
+              padding: EdgeInsets.all(25.0),
               
               child: Text("Start Over?", style: 
                   new TextStyle(
-                    fontSize: 60.0,
+                    fontSize: 20.0,
                     color: Colors.green,
                   ),
                 ),
