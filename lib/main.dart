@@ -5,8 +5,17 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext ctxt) {
+    
     return new MaterialApp(
-      home: new HomeScreen(),
+      home: new HomeScreen(), 
+      theme: ThemeData(
+        primaryColor: Colors.green,
+        //brightness: Brightness.light,
+        //backgroundColor: Colors.white, 
+        //fontFamily: 'Roboto Slab', 
+        
+        //accentColor: Color(#10000),
+      ),
     );
   }
 }
@@ -16,13 +25,35 @@ class HomeScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>")
+        title: new Text("r e c y c l a g e")
       ),
       body: Center(
           child: Column(
             children: <Widget>[
-              Text("Start"),
-              IconButton(
+              SizedBox(height: 200),
+              FlatButton(
+                onPressed: () {
+                    Navigator.push(
+                        ctxt,
+                        new MaterialPageRoute(builder: (ctxt) => new SoiledScreen()),
+                    );
+                  },
+                shape: RoundedRectangleBorder(
+                 borderRadius: new BorderRadius.circular(18.0),
+                 side: BorderSide(color: Colors.grey)
+                 ),
+                color: Colors.white,
+                padding: EdgeInsets.all(50.0),
+                
+                child: Text("Start", style: 
+                    new TextStyle(
+                      fontSize: 60.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                ),
+              SizedBox(height: 30),
+              /*IconButton(
                 icon: Icon(Icons.check),
                 tooltip: 'Start',
                 onPressed: () {
@@ -31,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                         new MaterialPageRoute(builder: (ctxt) => new SoiledScreen()),
                     );
                 },
-              )
+              )*/
             ]
           )
         )
@@ -44,7 +75,7 @@ class SoiledScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
           child: Column(
@@ -82,7 +113,7 @@ class MaterialScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
           child: Column(
@@ -214,7 +245,7 @@ class PlasticScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -264,7 +295,7 @@ class SoftPlasticScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -314,7 +345,7 @@ class ClingScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -364,7 +395,7 @@ class HardPlasticScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -430,7 +461,7 @@ class HardPlasticPastScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -483,7 +514,7 @@ class GlassScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -533,7 +564,7 @@ class FlatGlassScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -583,7 +614,7 @@ class LightBulbScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -633,7 +664,7 @@ class UnrecyclableLightBulbScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: new Text("""Lightbulbs can't be recycled with other commonly recyclable items.
       Some of your local furniture stores may offer a lightbulb recycling service. 
@@ -647,7 +678,7 @@ class PyrexScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -699,7 +730,7 @@ class CardboardScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -749,7 +780,7 @@ class FlatCardboardScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -799,7 +830,7 @@ class FoldedCardboardScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -850,7 +881,7 @@ class CardboardWithResidueScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: new Text("Remove the tape, stickers, or glue residue\n(or cut out relevant pieces of cardboard)\nand then the cardboard can be recycled!"),
     );
@@ -864,7 +895,7 @@ class PaperScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -914,7 +945,7 @@ class PaperStickerScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -964,7 +995,7 @@ class EnvelopeTypeScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -1014,7 +1045,7 @@ class EnvelopeScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -1064,7 +1095,7 @@ class FoilWrappingCoatingPaperScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -1116,7 +1147,7 @@ class MetalScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -1166,7 +1197,7 @@ class ElectronicBatteryScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Column(
         children: <Widget>[
@@ -1186,7 +1217,7 @@ class NonElectronicScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -1236,7 +1267,7 @@ class MoreMetalScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -1286,7 +1317,7 @@ class PotsPansScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Center(
         child: Column(
@@ -1338,7 +1369,7 @@ class MixedScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Column(
         children: <Widget>[
@@ -1362,7 +1393,7 @@ class UnrecyclableScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Column(
         children: <Widget>[
@@ -1394,7 +1425,7 @@ class RecyclableScreen extends StatelessWidget {
   Widget build (BuildContext ctxt) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("<APP NAME>"),
+        title: new Text("r e c y c l a g e"),
       ),
       body: Column(
         children: <Widget>[
